@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>{{file}}</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css')}}">
+</head>
+
+<body>
+  <h1 style="text-align: center;">{{file}}</h1>
+  <div class="button_container">
+    <a style="align-items:center;text-decoration:  none;" href="{{ url_for('upload_form') }}"><button type="submit"
+        class="button">Back</button></a>
+  </div>
+  {% if text %}
+  <div class="container">
+    <pre id="gfg">{{ text }}</pre>
+    {% else %}
+    <p>No text uploaded yet!!!!!</p>
+  </div>
+  {% endif %}
+</body>
+
+</html>
